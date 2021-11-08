@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="bootstrap-select.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    /><link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  />
+  <link rel="stylesheet" href="build/css/countrySelect.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row content">
+        <div class="col-lg-6 mb-3">
+          <ul>
+            <li>
+              <h5>Lorem Ipsum</h5>
+              <p class="lorem1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Proin
+                augue ipsum, aliquam et est quis, maximus tempus ante.
+              </p>
+            </li>
+            <li>
+              <h5>Maecenas egestas</h5>
+              <p class="lorem1">
+                Maecenas egestas orci mollis nibh pretium, sit amet lacinia
+                mauris blandit.
+              </p>
+            </li>
+            <li>
+              <h5>Suspendisse faucibus felis</h5>
+              <p class="lorem1">
+                Suspendisse faucibus felis id bibendum rhoncus. Phasellus neque
+                metus, varius id ultrices in, bibendum eget dolor. Ut augue
+                felis, sodales ut diam nec, congue vehicula turpis.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-5 submit">
+          <form>
+            <h4 class="head">Create an account</h4>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div>
+              <label for="exampleInputEmail1" class="form-label"
+                >Full Name</label
+              ><input
+                class="form-control"
+                type="text"
+                placeholder=""
+                aria-label="default input example"
+              />
+            </div>
+            <div>
+              <label for="exampleInputEmail1" class="form-label">Country</label
+              >&nbsp;<i class="fas fa-info-square"></i>
+            </label> 
+            <div class="input-group flex-nowrap">
+            <input 
+            id="country_selector"
+            type="text" 
+            class="form-control" 
+            >
+            </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword2" class="form-label"
+                >Password (again)</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword2"
+              />
+            </div>
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+              />
+              <label class="form-check-label" for="exampleCheck1"
+                >Get emails from us.</label
+              >
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary button1" type="button">Create account</button>
+                 <p class="text-center">Have an account? <a href="sign-in.html">Sign in</a></p>
+            </div>
+              </div>
+          </form>
+        </div>
+        <p class="footer">
+            Privacy and terms
+        </p>
+      </div>
+      <script src="jQuery.js"></script>
+      <script src="bootstrap.js"></script>
+      <script src="bootstrap-select.min.js"></script>
+      <script src="build/js/countrySelect.js"></script>
+      <script>
+        $("#country_selector").countrySelect({
+          defaultCountry: "us",
+          defaultStyling:"inside",
+          responsiveDropdown:true,
+          });
+          $("#country_selector").countrySelect("selectCountry", "gb");
+          $("#country_selector").countrySelect("setCountry", "United States");
+         // $("#country_selector").countrySelect("destroy");
+      </script>
+  </body>
+</html>
